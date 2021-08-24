@@ -1,0 +1,24 @@
+﻿@model WebApplicationPerson.Models.PFRSumm
+@{
+    ViewData["Title"] = "Результат запроса";
+    Layout = null;
+}
+
+<h3>Спасибо за запрос, @Model.FirstName</h3>
+@if (Model.Snils != "" && Model.Counter > 0)
+{
+    <table class="table table-sm table-striped table-bordered">
+    <tr><th>Имя</th><td>@Model.FirstName</td></tr>
+    <tr><th>Отчество</th><td>@Model.SecondName</td></tr>
+    <tr><th>Фамилия</th><td>@Model.MiddleName</td></tr>
+    <tr><th>Дата рождения</th><td>@Model.DateBirth</td></tr>
+    <tr><th>СНИЛС</th><td>@Model.Snils</td></tr>
+    <tr><th>Сумма</th><td>@Model.Summa</td></tr>
+    <tr><th>Период</th><td>@Model.Period</td></tr>
+    </table>
+}
+else
+{
+    @:По Вашему запросу ничего не найдено!
+}
+
